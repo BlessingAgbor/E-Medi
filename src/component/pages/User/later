@@ -1,0 +1,134 @@
+ <Container>
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#009688"
+          fill-opacity="1"
+          d="M0,192L0,192L288,192L288,96L576,96L576,32L864,32L864,96L1152,96L1152,0L1440,0L1440,320L1152,320L1152,320L864,320L864,320L576,320L576,320L288,320L288,320L0,320L0,320Z"
+        ></path>
+      </svg> */}
+        <Wrapper>
+          <Hold>
+            {/* <Divs> */}
+            <NavHold>
+              <Navs>PRODUCT</Navs>
+              <Navs>PRICE</Navs>
+              <Navs>QTY</Navs>
+              <Navs>TOTAL</Navs>
+            </NavHold>
+            {/* </Divs> */}
+
+            <ItemRow>
+              <Item>
+                <Div>
+                  <Imag src={pix3} />
+                </Div>
+                <Details>
+                  <Name>Diclofenac 100mg</Name>
+                  <Nafdac>203-445-43</Nafdac>
+                  <Category>Skin care</Category>
+                </Details>
+              </Item>
+              <Price>#23,000</Price>
+              <Quanty>
+                <Span>
+                  <div>+</div>
+                  <strong>2</strong>
+                  <div>-</div>
+                </Span>
+              </Quanty>
+              <Total>46,000</Total>
+            </ItemRow>
+
+            <ItemRow>
+              <Item>
+                <Div>
+                  <Imag src={pix3} />
+                </Div>
+                <Details>
+                  <Name>Diclofenac 100mg</Name>
+                  <Nafdac>203-445-43</Nafdac>
+                  <Category>Skin care</Category>
+                </Details>
+              </Item>
+              <Price>#23,000</Price>
+              <Quanty>
+                <Span>
+                  <div>+</div>
+                  <strong>2</strong>
+                  <div>-</div>
+                </Span>
+              </Quanty>
+              <Total>46,000</Total>
+            </ItemRow>
+            <ItemRow>
+              <Item>
+                <Div>
+                  <Imag src={pix3} />
+                </Div>
+                <Details>
+                  <Name>Diclofenac 100mg</Name>
+                  <Nafdac>203-445-43</Nafdac>
+                  <Category>Skin care</Category>
+                </Details>
+              </Item>
+              <Price>#23,000</Price>
+              <Quanty>
+                <Span>
+                  <div>+</div>
+                  <strong>2</strong>
+                  <div>-</div>
+                </Span>
+              </Quanty>
+              <Total>46,000</Total>
+            </ItemRow>
+            <FootNote>
+              <Note>ADD A NOTE</Note>
+              <Input placeholder="Some words to the in House team" />
+            </FootNote>
+          </Hold>
+        </Wrapper>
+        {/* <Hold> */}
+        <Right>
+          <Line />
+          <HoldRight>
+            <Top>
+              CART TOTAL <span>#150,000</span>
+              <p>Shipping and taxes calculated at checkpoint</p>
+            </Top>
+            <div>
+              <input type="checkbox"></input>
+              <span>
+                I agree to the <i>Terms and Conditions</i>
+              </span>
+            </div>
+            <Chec>
+              CHECKOUT <IoMdCheckboxOutline />
+            </Chec>
+            <Pay>
+              <img src={pix4} />
+            </Pay>
+          </HoldRight>
+          <Icon />
+        </Right>
+        {/* </Hold> */}
+      </Container>
+
+
+      <div>
+      <Container>
+        <table>
+          <tr>
+            <th>Month</th>
+            <th>Savings</th>
+          </tr>
+          <tr>
+            <td>January</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>$80</td>
+          </tr>
+        </table>
+      </Container>
+    </div>

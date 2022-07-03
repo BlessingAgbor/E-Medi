@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./component/header/Header"
+import PharmSignUp from "./component/pages/Pharmacy/SignUp"
+import DocSignUp from "./component/pages/Doctor/SignUpDoc"
+import Auth from "./component/MainAuth/Auth"
+import AuthUser from "./component/MainAuth/AuthUser"
+import AllDashBoard from "./component/pages/Dashboard/AllDashboard"
+import {BrowserRouter,Routes, Route} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      
+      <AuthUser />
+      <AllDashBoard />
+    </BrowserRouter>
   );
 }
 
