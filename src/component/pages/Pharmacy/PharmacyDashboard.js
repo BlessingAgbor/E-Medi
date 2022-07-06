@@ -75,7 +75,7 @@ const PharmacyDashboard = () => {
               </NV>
             </Nav>
 
-            <Link to="drugs" style={{
+            <Link to="/drugs" style={{
                 textDecoration:"none"
             }}>
               <Nav>

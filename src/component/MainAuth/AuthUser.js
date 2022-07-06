@@ -22,6 +22,7 @@ const AuthUser = () => {
         <Route path="/" element={<CheckOut />} />
         <Route path="/2" element={<UploadDrugs />} />
         <Route path="/3" element={<PharmSignUp />} />
+        <Route path="/4" element={<Home />} />
       </Routes>
     </div>
   );

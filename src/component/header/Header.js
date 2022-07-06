@@ -1,48 +1,92 @@
 import React from 'react'
 import styled from "styled-components"
 import log from "../../ASSETS/techFairLogo.svg"
-import {BiSearch} from "react-icons/bi"
+import { BiSearch, BiMenuAltLeft } from "react-icons/bi";
 import { HiOutlineMenuAlt2, HiMenu } from "react-icons/hi";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import {MdOutlinePerson} from "react-icons/md"
-// import {GrMenu} from "react-icons/gr"
+import {GrMenu} from "react-icons/gr"
+import {FaTimes, FaBars} from "react-icons/fa"
+import Side from "./SideHeader"
 
 const Header = () => {
   return (
-    <Container>
-      <Wrapp>
-        <LogoHold>
-          <Logo src={log} />
-          <div>E-Medi</div>
-        </LogoHold>
-        <Navig>
-          <Nav>Home</Nav>
-          <Nav>About Us</Nav>
-          <Nav>Services</Nav>
-          <Nav>Pharmacy</Nav>
-        </Navig>
-        <Right>
-          {/* <Hld>
-            <BiSearch style={{ marginRight: "10px" }} />
-          </Hld> */}
-          {/* <Hld>
-            <BsFillCartPlusFill style={{ marginRight: "10px" }} />
-          </Hld> */}
-          {/* <Hld>
-            <MdOutlinePerson style={{ marginRight: "10px" }} />
-          </Hld> */}
-          <Button>Appointment</Button>
-          <Hld style={{ border: "none" }}>
-            <HiMenu style={{ marginRight: "10px" }} />
-          </Hld>
-        </Right>
-      </Wrapp>
-    </Container>
+    <>
+      <Container>
+        <Wrapp>
+          <LogoHold>
+            <Logo src={log} />
+            <div>E-Medi</div>
+          </LogoHold>
+          <Navig>
+            <Nav>Home</Nav>
+            <Nav>Consult</Nav>
+            <Nav>Pharmacy</Nav>
+          </Navig>
+          <Right>
+            <Button>Appointment</Button>
+            <Hld style={{ border: "none" }}></Hld>
+          </Right>
+          <Burger>
+            <Men
+              id="bar"
+              onClick={() => {
+                document.getElementById("display").style.top = "0px";
+                document.getElementById("bar").style.display = "none";
+                document.getElementById("times").style.display = "block";
+              }}
+            />
+            <CancleIcon
+              id="times"
+              onClick={() => {
+                document.getElementById("display").style.top = "-1000px";
+                document.getElementById("bar").style.display = "block";
+                document.getElementById("times").style.display = "none";
+              }}
+            />
+          </Burger>
+        </Wrapp>
+      </Container>
+      <SideMenu id="display">
+        <Side />
+      </SideMenu>
+    </>
   );
 }
 
 export default Header
-
+const Burger = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 30%);
+    height: 70px;
+    padding-right: 10px;
+    left:80%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 30px; */
+    position: fixed;
+    top: 0;
+  }
+`;
+const SideMenu = styled.div`
+  width: 200px;
+  height: 650px;
+  background-color: gray;
+  position: fixed;
+  top: -3000px;
+  z-index: 10;
+  transition: all 2s ease;
+`;
+const CancleIcon = styled(BiMenuAltLeft)`
+  font-size: 30px;
+  display: none;
+`;
+const BarIcon = styled(FaBars)`
+  font-size: 30px;
+`;
 const Container = styled.div`
   width: 100%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -88,6 +132,9 @@ display:none;
   cursor: pointer;
 }
 `
+const Men = styled(GrMenu)`
+  font-size: 30px;
+`;
 const Right = styled.div`
   /* background: pink; */
   display: flex;

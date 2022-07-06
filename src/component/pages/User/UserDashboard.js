@@ -1,364 +1,102 @@
 import React from "react";
 import styled from "styled-components";
-import pix from "../../../ASSETS/fa6-solid_user-doctor.png";
-import log from "../../../ASSETS/Ellipse 12.png";
+import pix from "../../../ASSETS/file-icons_dashboard.png";
+import user from  "../../../ASSETS/fa-solid_users.png"
+import user2 from "../../../ASSETS/fa-solid_users2.png";
+import user3 from "../../../ASSETS/uis_schedule.png"
 import { BiCurrentLocation, BiLocationPlus, BiSearchAlt } from "react-icons/bi";
-const DetailUser = () => {
+import SideNav from "../Pharmacy/PharmacyDashboard"
+const DetailDoctor = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Row2>
-          <div
-            style={{
-              display: "flex",
-              width: "30%",
-              alignItems: "center",
-            }}
-          >
-            <Icon2 src={pix} />
-            <Title>Doctors</Title>
-          </div>
+    <div>
+      <SideNav />
+      <Container>
+        <Wrapper>
+          <Row2>
+            <div
+              style={{
+                display: "flex",
+                width: "30%",
+                alignItems: "center",
+              }}
+            >
+              <Icon2 src={pix} />
+              <Title>Dashboard</Title>
+            </div>
+          </Row2>
+          <Row>
+            <Hold>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Doctors</Text>
+                  </End>
+                  <Divs>235</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Pharmacists</Text>
+                  </End>
+                  <Divs>315</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user3} />
+                    <Text>Number of Appointments</Text>
+                  </End>
+                  <Divs>20</Divs>
+                </Right>
+              </Card>
+            </Hold>
+          </Row>
 
-          <Holder>
-            <SearchBar>
-              <Top>
-                {/* <Icons /> */}
-                <div>By+</div>
-                {/* <select>
-                  <option>Location</option>
-                </select> */}
-              </Top>
-              <Input placeholder="Doctors, Specalists" />
-              <Icon1 />
-            </SearchBar>
-          </Holder>
-        </Row2>
-        <Row>
-          {/* <Div>
-            <Topic>Build up your Profile</Topic>
-          </Div> */}
-          <Hold>
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
+          {/* Row two */}
+          <Row>
+            <Hold>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Doctors</Text>
+                  </End>
+                  <Divs>235</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Pharmacists</Text>
+                  </End>
+                  <Divs>315</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user2} />
+                    <Text>Number of Appointments</Text>
+                  </End>
+                  <Divs>20</Divs>
+                </Right>
+              </Card>
+            </Hold>
+          </Row>
 
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-
-            {/* card2 */}
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-            {/* card 3 */}
-
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-          </Hold>
-        </Row>
-
-        {/* Row two */}
-
-        <Row>
-          <Hold>
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-
-            {/* card2 */}
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-            {/* card 3 */}
-
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-          </Hold>
-        </Row>
-
-        {/* Row 3 */}
-        <Row>
-          <Hold>
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-
-            {/* card2 */}
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-            {/* card 3 */}
-
-            <Card>
-              {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
-              <Right>
-                <Profile>
-                  <ImageHold>
-                    <Image src={log} />
-                    {/* <Div></Div> */}
-                  </ImageHold>
-                  <NameHold>
-                    <Name>Kelechi Dickson</Name>
-                    <NameTag>Neurosurgeon</NameTag>
-                  </NameHold>
-                </Profile>
-
-                {/* <Product>My Product</Product> */}
-                <Text>
-                  <Icons />
-                  <span>Nigeria, Lagos State</span>
-                </Text>
-                <End>
-                  <span>
-                    Patients: <b>230</b>
-                  </span>
-                  <Click>Book Appointment</Click>
-                </End>
-              </Right>
-            </Card>
-          </Hold>
-        </Row>
-      </Wrapper>
-    </Container>
+          {/* Row 3 */}
+        </Wrapper>
+      </Container>
+    </div>
   );
 };
 
-export default DetailUser;
+export default DetailDoctor;
 // const Container = styled.div``
 const Name = styled.div``;
 const NameTag = styled.div`
@@ -399,9 +137,14 @@ const Profile = styled.div`
   /* justify-content: space-between; */
   /* width: 70%; */
   /* flex-direction: row; */
+  @media (max-width: 800px) {
+    flex-direction:column;
+    justify-content: center;
+
+  }
 `;
 const Icon1 = styled(BiSearchAlt)`
-  font-size: 20px;
+  font-size:20px;
   /* color: ; */
   cursor: pointer;
   /* background: grey; */
@@ -412,6 +155,7 @@ const Icon1 = styled(BiSearchAlt)`
     font-size: 17px;
   }
 `;
+           
 
 const Input = styled.input`
   background-color: transparent;
@@ -460,16 +204,16 @@ const Holder = styled.div`
     /* background: blue; */
     cursor: pointer;
     color: #009688;
-    background: #e5e5e5;
+    background: #E5E5E5;
     font-size: 20px;
   }
   display: flex;
   /* align-items: center; */
   /* height: 100%; */
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   /* width: 100%; */
-  flex: 1;
+  flex:1;
   @media (max-width: 800px) {
     width: 100%;
     margin: 10px 0;
@@ -478,8 +222,8 @@ const Holder = styled.div`
   justify-content: center;
 `;
 const Icons = styled(BiLocationPlus)`
-  margin-right: 10px;
-  color: red;
+margin-right: 10px;
+color: red;
 `;
 const Top = styled.div`
   /* width: 100%; */
@@ -534,28 +278,35 @@ const Click = styled.div`
   padding: 0 10px;
   background: #1069e1;
   display: flex;
-  color: #fff;
+  color:#fff;
   justify-content: center;
   align-items: center;
   @media (max-width: 800px) {
-    width: 50%;
-    font-size: 80%;
+    width:50%;
+    font-size: 50%;
   }
 `;
 const End = styled.div`
   width: 100%;
-  margin-top: 30px;
+  /* margin-top:10px; */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items:center ; */
+  margin-right: 10px;
+  @media (max-width: 800px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 const Text = styled.div`
   width: 100%;
-  font-weight: bolder;
-
+  font-weight: lighter;
+  font-size: 20px;
   align-items: center;
   display: flex;
-  margin: 20px 0;
+  margin: 10px 0;
 
   @media (max-width: 800px) {
     /* min-height: 200px; */
@@ -564,6 +315,9 @@ const Text = styled.div`
     /* text-align: center; */
     font-size: 80%;
     /* width:80%; */
+    span{
+      font-size: 60%;
+    }
     /* background:green; */
   }
 `;
@@ -578,8 +332,20 @@ const Product = styled.div`
 const Right = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   height: 100%;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
 `;
 const Div1 = styled.div`
   display: flex;
@@ -593,19 +359,21 @@ const Div1 = styled.div`
   }
 `;
 
-const Topic = styled.div``;
+const Divs = styled.div`
+font-size: 26px;
+font-weight: 800;
+`;
 const Card = styled.div`
-  width: 350%;
+  width: 30%;
   /* height: 200px; */
   display: flex;
-  background: #fff;
+  background: #009688;
   align-items: flex-start;
   padding: 30px 15px;
-  /* padding-right: 40px;
-  padding-left: 40px; */
-  border-top: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  margin-right: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: all 350ms;
+  border-radius: 10px;
   :hover {
     transition: all 350ms;
     background: #009688;
@@ -622,7 +390,7 @@ const Card = styled.div`
   }
 
   @media (max-width: 800px) {
-    width: 50%;
+    width: 80%;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -630,6 +398,9 @@ const Card = styled.div`
     min-height: 200px;
     height: 100%;
     flex-direction: column;
+    padding: 0 10px;
+    justify-content:space-around;
+    align-items: center;
     /* padding-bottom:10px; */
   }
 `;
@@ -652,7 +423,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: column;
   /* background: purple; */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ 
   margin: 40px 0;
   /* height: 212px; */
   background: #fff;
@@ -668,28 +439,24 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   min-height: 100vh;
-  justify-content: center;
-  /* align-items: center; */
+  /* justify-content: center; */
   flex-direction: column;
-  /* background: hotpink; */
 `;
 
 const Container = styled.div`
   width: calc(100vw - 250px);
-  /* min-height: 100vh; */
-  /* height: 150%; */
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   position: absolute;
-  /* left:0; */
   left: 220px;
-  /* padding: 0; */
-  /* background: wheat; */
   @media (max-width: 800px) {
     width: calc(100vw - 150px);
     padding: 0;
     align-items: center;
     left: 150px;
+  }
+  @media (max-width: 500px) {
+    width: calc(100vw - 100px);
+    left: 100px;
   }
 `;

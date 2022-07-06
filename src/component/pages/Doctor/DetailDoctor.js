@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import pix from "../../../ASSETS/fa6-solid_user-doctor.png";
-import log from "../../../ASSETS/Ellipse 12.png"
+import pix from "../../../ASSETS/file-icons_dashboard.png";
+import user from  "../../../ASSETS/fa-solid_users.png"
+import user2 from "../../../ASSETS/fa-solid_users2.png";
+import user3 from "../../../ASSETS/uis_schedule.png"
 import { BiCurrentLocation, BiLocationPlus, BiSearchAlt } from "react-icons/bi";
 import SideNav from "../Pharmacy/PharmacyDashboard"
 const DetailDoctor = () => {
@@ -19,69 +21,75 @@ const DetailDoctor = () => {
               }}
             >
               <Icon2 src={pix} />
-              <Title>Doctors</Title>
+              <Title>Dashboard</Title>
             </div>
-
-            <Holder>
-              <SearchBar>
-                <Top>
-                  {/* <Icons /> */}
-                  <div>By+</div>
-                  {/* <select>
-                  <option>Location</option>
-                </select> */}
-                </Top>
-                <Input placeholder="Doctors, Specalists" />
-                <Icon1 />
-              </SearchBar>
-            </Holder>
           </Row2>
           <Row>
-            {/* <Div>
-            <Topic>Build up your Profile</Topic>
-          </Div> */}
             <Hold>
               <Card>
-                {/* <Left>
-                <Div1>
-                  <Dot></Dot>
-                  <Number>24</Number>
-                </Div1>
-              </Left> */}
                 <Right>
-                  <Profile>
-                    <ImageHold>
-                      <Image src={log} />
-                      {/* <Div></Div> */}
-                    </ImageHold>
-                    <NameHold>
-                      <Name>Kelechi Dickson</Name>
-                      <NameTag>Neurosurgeon</NameTag>
-                    </NameHold>
-                  </Profile>
-
-                  {/* <Product>My Product</Product> */}
-                  <Text>
-                    <Icons />
-                    <span>Nigeria, Lagos State</span>
-                  </Text>
                   <End>
-                    <span>
-                      Patients: <b>230</b>
-                    </span>
-                    <Click>Book Appointment</Click>
+                    <img src={user} />
+                    <Text>Number of available Doctors</Text>
                   </End>
+                  <Divs>235</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Pharmacists</Text>
+                  </End>
+                  <Divs>315</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user3} />
+                    <Text>Number of Appointments</Text>
+                  </End>
+                  <Divs>20</Divs>
                 </Right>
               </Card>
             </Hold>
           </Row>
 
           {/* Row two */}
-
-        
+          <Row>
+            <Hold>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Doctors</Text>
+                  </End>
+                  <Divs>235</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user} />
+                    <Text>Number of available Pharmacists</Text>
+                  </End>
+                  <Divs>315</Divs>
+                </Right>
+              </Card>
+              <Card>
+                <Right>
+                  <End>
+                    <img src={user2} />
+                    <Text>Number of Appointments</Text>
+                  </End>
+                  <Divs>20</Divs>
+                </Right>
+              </Card>
+            </Hold>
+          </Row>
 
           {/* Row 3 */}
-         
         </Wrapper>
       </Container>
     </div>
@@ -280,10 +288,12 @@ const Click = styled.div`
 `;
 const End = styled.div`
   width: 100%;
-  margin-top:30px;
+  /* margin-top:10px; */
   display: flex;
-  justify-content: space-between;
-  align-items:center ;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items:center ; */
+  margin-right: 10px;
   @media (max-width: 800px) {
     width: 100%;
     flex-direction: column;
@@ -292,11 +302,11 @@ const End = styled.div`
 `;
 const Text = styled.div`
   width: 100%;
-  font-weight: bolder;
-
+  font-weight: lighter;
+  font-size: 20px;
   align-items: center;
   display: flex;
-  margin: 20px 0;
+  margin: 10px 0;
 
   @media (max-width: 800px) {
     /* min-height: 200px; */
@@ -322,11 +332,19 @@ const Product = styled.div`
 const Right = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   height: 100%;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+
   @media (max-width: 800px) {
-    justify-content:center;
+    justify-content: center;
     align-items: center;
+  }
+  img {
+    width: 30px;
+    height: 30px;
   }
 `;
 const Div1 = styled.div`
@@ -341,19 +359,21 @@ const Div1 = styled.div`
   }
 `;
 
-const Topic = styled.div``;
+const Divs = styled.div`
+font-size: 26px;
+font-weight: 800;
+`;
 const Card = styled.div`
-  width: 350%;
+  width: 30%;
   /* height: 200px; */
   display: flex;
-  background: #fff;
+  background: #009688;
   align-items: flex-start;
   padding: 30px 15px;
-  /* padding-right: 40px;
-  padding-left: 40px; */
-  border-top: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  margin-right: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: all 350ms;
+  border-radius: 10px;
   :hover {
     transition: all 350ms;
     background: #009688;
@@ -370,7 +390,7 @@ const Card = styled.div`
   }
 
   @media (max-width: 800px) {
-    width: 50%;
+    width: 80%;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -378,14 +398,16 @@ const Card = styled.div`
     min-height: 200px;
     height: 100%;
     flex-direction: column;
+    padding: 0 10px;
+    justify-content:space-around;
+    align-items: center;
     /* padding-bottom:10px; */
   }
 `;
 const Hold = styled.div`
   width: 100%;
   display: flex;
-  /* height: 212px; */
-  /* background: brown; */
+
   @media (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
@@ -400,7 +422,8 @@ const Row = styled.div`
   display: flex;
   flex-direction: column;
   /* background: purple; */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ align-items: center;
+ justify-content:center;
   margin: 40px 0;
   /* height: 212px; */
   background: #fff;
@@ -416,7 +439,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   min-height: 100vh;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
 `;
 
